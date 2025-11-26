@@ -1,47 +1,68 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.datepicker{
+.datepicker {
     max-width: 300px;
     margin: 3rem auto;
 }
 
-.input{
+.input {
     border: 2px solid black;
     margin-bottom: 4px;
 }
 
-input{
+input {
     padding: 0.4rem 3.9rem;
     font-size: 1.3rem;
 }
 
-.calender{
+/* Calendar Box */
+.calendar {
     border: 2px solid black;
+    padding-bottom: 0.5rem;
 }
 
-.month-year{
+/* Month + Year */
+.month-year {
     display: flex;
-    margin: 0.5rem 1rem;
     justify-content: space-between;
+    margin: 0.5rem 1rem;
     font-size: 1.3rem;
 }
 
-.symbol{
+.symbol {
     font-weight: 700;
+    cursor: pointer;
 }
 
-.days{
-    display: flex;
-    justify-content: space-between;
-    margin: 0.1rem 1rem;
+/* Days Row */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0.2rem 1rem;
+    text-align: center;
+    font-weight: 600;
 }
 
-.dates{
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
+/* Dates Grid */
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin: 0.5rem 1rem;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.dates div {
+    padding: 0.4rem 0;
+    border-radius: 4px;
+}
+
+/* OPTIONAL: Hover effect */
+.dates div:hover {
+    background: #eaeaea;
+    cursor: pointer;
 }
